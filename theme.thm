@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <type name="Time"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="Item_Condition"/>
+   <type name="List"/>
+   <type name="String"/>
+   <type name="Time"/>
+   <type name="univ"/>
+   <type name="order/Order"/>
+   <type name="seq/Int"/>
+   <set name="First" type="order/Order"/>
+   <set name="Last" type="order/Order"/>
+   <set name="Next" type="order/Order"/>
+   <set name="Prev" type="order/Order"/>
+</node>
+
+<node hideunconnected="no" color="Green">
+   <type name="Item"/>
+</node>
+
+<node visible="no">
+   <type name="List_Item"/>
+   <type name="Outside_List_Item"/>
+</node>
+
+<edge visible="no" attribute="yes">
+   <relation name="condition"> <type name="Item"/> <type name="Item_Condition"/> </relation>
+   <relation name="items"> <type name="List"/> <type name="Item"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
